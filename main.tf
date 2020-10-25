@@ -143,7 +143,7 @@ resource "aws_security_group" "security-group" {
 }
 
 # Crea n instancias Ubuntu
-resource "aws_instance" "linux-training" {
+resource "aws_instance" "aws" {
   count                       = "${var.cantidad_instancias}"
   ami                         = "ami-0d1cd67c26f5fca19"
   instance_type               = "t2.micro"
