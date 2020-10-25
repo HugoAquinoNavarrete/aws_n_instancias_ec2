@@ -11,11 +11,11 @@
 
 # Después genera una llave ejecutando
 # "ssh-keygen"
-# Sálvalo en el directorio donde este este script <ruta_completa>/linux-training-key
+# Sálvalo en el directorio donde este este script <ruta_completa>/key
 # Deja en blanco "passphrase"
 
 # Para conectarte con la VM una vez creada
-# ssh -v -l ubuntu -i linux-training-key <ip_publica_instancia_creada> 
+# ssh -v -l ubuntu -i key <ip_publica_instancia_creada> 
 
 # Para correr este script desde la consola:
 # terraform apply -var "nombre_instancia=<nombre_recursos>" -var "cantidad_instancias=<n>"
