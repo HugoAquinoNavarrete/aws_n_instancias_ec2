@@ -26,7 +26,7 @@ Antes de ejecutar este script, ejecuta `aws configure` para habilitar
   sudo mv terraform /usr/local/bin/
   terraform --version 
    ```
-## 5. Si es la primera vez que corres el script, ejecuta `terraform init"
+## 5. Si es la primera vez que corres el script, ejecuta `terraform init`
 
 ## 6. Para ejecutar el script `terraform apply -var "nombre_instancia=<nombre_recursos>" -var "cantidad_instancias=<n>"` cuando el siguiente mensaje aparezca, escribe `yes`:
    ```bash
