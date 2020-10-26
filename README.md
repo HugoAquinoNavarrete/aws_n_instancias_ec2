@@ -1,6 +1,6 @@
 # Creación de "n" instancias EC2 tipo ubuntu en AWS usando Terraform
 
-Script en Terraform que automatiza el despliegue en AWS n instancias EC2 tipo ubuntu con acceso a internet que permiten tráfico SSH, HTTP y HTTPS
+Script en Terraform que automatiza el despliegue en AWS n instancias EC2 tipo ubuntu con acceso a internet que permiten tráfico SSH, HTTP y HTTPS. El script inicialmente fue hecho para la versión 0.11.3 y se migra a la 0.13.5
 
 ## 1. Configura AWS (este script corre en la región "us-west-2")
 Antes de ejecutar este script, ejecuta `aws configure` para habilitar
@@ -13,23 +13,22 @@ Antes de ejecutar este script, ejecuta `aws configure` para habilitar
    ```bash 
    ssh-keygen
    ```
-<<<<<<< HEAD
-   Sálvala en el directorio donde correras este script `<ruta_absoluta>/key`, deja vacío `passphrase`
-=======
-   La llave debe llamarse `key`, sálvala en el directorio donde correras este script `<ruta_absoluta>/key`, deja vacío `passphrase`
->>>>>>> 8d47ad075d680bc9882e518d46e328dd8ae7de70
+
+   Sálvala en el directorio donde correras este script `<ruta_absoluta>/key`, deja vacío `passphrase`. La llave debe llamarse `key.pub`, sálvala en el directorio donde correras este script `<ruta_absoluta>/key`, deja vacío `passphrase`
 
 ## 3. Conexión por SSH a la máquina virtual 
    ```bash
    ssh -v -l ubuntu -i key <ip_publica_instancia_ec2>
    ```
-## 4. Script compatible con la versión de Terraform v0.11.3, estos son los pasos para descargarlo e instalarlo
+
+## 4. Script compatible con la versión de Terraform v0.13.5, estos son los pasos para descargarlo e instalarlo
    ```bash
-  wget https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip
-  unzip terraform_0.11.3_linux_amd64.zip
+  wget https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
+  unzip terraform_0.13.5_linux_amd64.zip
   sudo mv terraform /usr/local/bin/
   terraform --version 
    ```
+
 ## 5. Si es la primera vez que corres el script, ejecuta `terraform init`
 
 ## 6. Para ejecutar el script `terraform apply -var "nombre_instancia=<nombre_recursos>" -var "cantidad_instancias=<n>"` cuando el siguiente mensaje aparezca, escribe `yes`:
