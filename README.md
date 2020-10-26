@@ -13,7 +13,7 @@ Antes de ejecutar este script, ejecuta `aws configure` para habilitar
    ```bash 
    ssh-keygen
    ```
-   Sálvala en el directorio donde correras este script `<ruta_absoluta>/linux-training-key`, deja vacío `passphrase`
+   Sálvala en el directorio donde correras este script `<ruta_absoluta>/key`, deja vacío `passphrase`
 
 ## 3. Conexión por SSH a la máquina virtual 
    ```bash
